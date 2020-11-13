@@ -6,7 +6,7 @@ Java implementation of "Grove Coding Challenge"
 
 JDK 8, Ant 1.9, Bourne shell 
 
-## Installation (assumes platform includes unix bourne shell) 
+## Installation
 
 • Open a terminal and change to the grove directory 
 
