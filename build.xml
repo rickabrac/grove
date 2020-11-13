@@ -1,0 +1,36 @@
+<project name="grove" default="build" basedir=".">
+
+	<description>
+		Grove Coding Challenge
+	</description>
+
+	<property name="src" location="."/>
+	<property name="build" location="build"/>
+
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${build}"/>
+	</target>
+
+	<path id="classpath">
+		<pathelement location="./json-simple.jar"/>
+	</path>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" classpathref="classpath" includeantruntime="false">
+			<compilerarg line="-encoding utf-8 -Xlint"/>
+		</javac>
+	</target>
+
+	<target name="build" depends="compile">
+		<jar jarfile="${build}/StoreFinder.jar"
+         	manifest="StoreFinder.mf"
+			basedir="${build}"
+			excludes="*.jar"/>
+	</target>
+
+	<target name="clean" description="clean">
+		<delete dir="${build}"/>
+	</target>
+
+</project>
