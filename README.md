@@ -18,5 +18,11 @@ JDK 8, Ant 1.9, Bourne shell
 
 ## Assumptions
 
-• The 'java' command must be in the user's execution path.
+• The 'java' and 'ant' commands must be in the user's execution path.
+
+• I am assuming that the free geolocation API I selected (https://api.positionstack.com) returns
+  the correct result. In fact, it returns a JSON array of potential matches. My code assumes that
+  the first entry in that array is the right answer, although in testing, I definitely noticed that
+  it makes mistakes, but it worked for most of the addresses I entered. Also, if there is a routing
+  or connection failure, the timeout is too long (~20 seconds). 
 
