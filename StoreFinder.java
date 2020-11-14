@@ -2,10 +2,6 @@
 // StoreFinder.java - Grove Collaborative coding challenge 
 //
 // Rick Tyler
-// 1015 Rose Avenue
-// Oakland, CA 94611
-// (510) 910-6536
-// rick.tyler@gmail.com
 //
 
 import java.io.*;
@@ -231,7 +227,7 @@ public class StoreFinder
 			// scan store-locations.csv
 			File file = new File( "./store-locations.csv" );
 			Scanner scanner = new Scanner( file );
-			ArrayList< HashMap< String, String > > locations = new ArrayList< HashMap< String, String > >(); 
+			ArrayList< HashMap< String, String > > locations = new ArrayList<>(); 
 			double distance = -1;
 			long lines = 0;
 			String store = null;
@@ -241,7 +237,7 @@ public class StoreFinder
 				String line = scanner.nextLine();
 				if( lines++ == 0 )
 					continue;
-				ArrayList<String> result = new ArrayList<String>();
+				ArrayList< String > result = new ArrayList<>();
 				int start = 0;
 				boolean inQuotes = false;
 				for( int current = 0; current < line.length(); current++ )
