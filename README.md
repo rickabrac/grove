@@ -1,6 +1,6 @@
 ## Synopsis
 
-Java implementation of "Grove Coding Challenge"
+Java implementation of find_stores coding challenge
 
 ## System Requirements 
 
@@ -8,7 +8,7 @@ JDK 8, Ant 1.9, Bourne shell
 
 ## Installation
 
-• Open a terminal and change to the grove directory 
+• Open a terminal and change to the cloned subdirectory 
 
 • Enter 'ant' at the command prompt (without quotes) to compile the program. 
 
