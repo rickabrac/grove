@@ -96,9 +96,7 @@ public class StoreFinder
 		}
 		JSONParser jsonParser = new JSONParser();
 		if( jsonParser == null )
-		{
 			throw( new Exception( "new JSONParser() failed" ) );
-		}
 		Object obj = null;
 		try
 		{
@@ -118,36 +116,7 @@ public class StoreFinder
 		if( responseCode == 404 )
 			return( null );
 		if( responseCode > 201 )
-		{
-			if( jsonOutput.get( "errors" ) == null )
-			{
-				// do nothing
-			}
-			else if( jsonOutput.get( "errors" ) instanceof String )
-			{
-				String errors = (String) jsonOutput.get( "errors" );
-				throw( new Exception( errors ) );
-			}
-			else if( jsonOutput.get( "errors" ) instanceof JSONObject )
-			{
-				JSONObject errors = (JSONObject) jsonOutput.get( "errors" );
-				JSONArray base = (JSONArray) errors.get( "base" );
-				if( base == null )
-				{
-					throw( new Exception( "errors.base not returned" ) );
-				}
-				String error = "";
-				for( int i = 0; i < base.size(); i++ )
-				{
-					if( error.length() > 0 )
-						error += " ";
-					String errorFragment = (String) base.get( i );
-					error += errorFragment + ".";
-				}
-				throw( new Exception( error ) ); 
-			}
 			throw( new Exception( "responseCode=" + responseCode ) );
-		}
 		return( jsonOutput );
 	}
 
