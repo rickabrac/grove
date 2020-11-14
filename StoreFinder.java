@@ -1,5 +1,5 @@
 //
-// StoreFinder.java - Grove Collaborative coding challenge 
+// StoreFinder.java - find_store coding challenge 
 //
 // Rick Tyler
 //

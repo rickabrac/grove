@@ -1,4 +1,4 @@
-<project name="grove" default="build" basedir=".">
+<project name="find_store" default="build" basedir=".">
 
 	<description>
 		Grove Coding Challenge
