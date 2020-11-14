@@ -10,19 +10,23 @@ JDK 8, Ant 1.9, Bourne shell
 
 • Open a terminal and change to the cloned subdirectory 
 
-• Enter 'ant' at the command prompt (without quotes) to compile the program. 
+• Enter 'ant' at the command prompt to compile the program
 
-• Type 'chmod +x find_store' (in case find_store script execute permission unset by os security)
+• On unix systems, type 'chmod +x find_store' (if find_store script is not executable)
 
-• find_store is a bourne shell wrapper for the java command required to run the executable
+• find_store is a bourne shell wrapper for java command required to run executable
 
 ## Assumptions
 
 • The 'java' and 'ant' commands must be in the user's execution path.
 
-• I am assuming that the free geolocation API I selected (https://api.positionstack.com) returns
-  the correct result. In fact, it returns a JSON array of potential matches. My code assumes that
-  the first entry in that array is the right answer, although in testing, I definitely noticed that
-  it makes mistakes, but it worked for most of the addresses I entered. Also, if there is a routing
-  or connection failure, the timeout is too long (~20 seconds). 
+## Caveats
+
+• I assumed the geolocation API I selected (https://api.positionstack.com) would be accurate. 
+  It returns a JSON array of potential matches. In ad hoc testing, I noticed that it sometimes
+  returns bogus results.  To improve accuracy, I would try a different geolocation API.
+
+• If there is a connection failure, the default timeout is too long (~20 seconds).
+
+• No unit or regression tests :(
 
