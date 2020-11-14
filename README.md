@@ -6,7 +6,7 @@ Java implementation of find_stores coding challenge
 
 JDK 8, Ant 1.9, Bourne shell 
 
-## Installation
+## Setup
 
 • Open a terminal and change to the cloned subdirectory 
 
